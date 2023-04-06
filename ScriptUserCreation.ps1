@@ -161,11 +161,9 @@ if ($result –eq [System.Windows.Forms.DialogResult]::OK)
     # On récupère quel utilisateur a été choisi pour être copié
     $NewUser = $shortName.ToLower()+'_'+$longName.Substring(0,1).ToLower()
     $selectedUser = $ComboBox.SelectedItem
-    Write-Host $selectedUser
     $SelectedUserOU = (Get-ADUser -Identity $selectedUser -Properties DistinguishedName)
     $Groups = (Get-ADPrincipalGroupMembership -Identity $selectedUser).Name
     $userOU = ($SelectedUserOU.DistinguishedName -split ",",2)[1]
-    Write-Host $userOU
 
     $UserDepartment = (Get-ADUser -Identity $selectedUser -Properties Department)
     $SetUserDepartment = ($UserDepartment.Department)
