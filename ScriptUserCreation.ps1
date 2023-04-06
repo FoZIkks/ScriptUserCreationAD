@@ -21,7 +21,7 @@ function GenerateRandomPassword {
 
     # Déclaration des listes contenant des mots qui seront choisis et assemblés au hasard
         
-    [String[]]$passwordPrincipalName = "Orange", "Hypromat", "Elephant"
+    [String[]]$passwordPrincipalName = "Orange", "Ananas", "Passpartout"
     [String[]]$passwordSecondName = "pass", "pom", "ter", "bis", "plu"
     [String[]]$passwordSpecialCaracter = "$", "!", "&", "@!", "/"
     $passwordNumber = Get-Random -Maximum 1000
