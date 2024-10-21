@@ -21,7 +21,7 @@ function GenerateRandomPassword {
 
     # Déclaration des listes contenant des mots qui seront choisis et assemblés au hasard
         
-    [String[]]$passwordPrincipalName = "Orange", "Ananas", "Passpartout"
+    [String[]]$passwordPrincipalName = "Pomelo", "Ananas", "Passpartout"
     [String[]]$passwordSecondName = "pass", "pom", "ter", "bis", "plu"
     [String[]]$passwordSpecialCaracter = "$", "!", "&", "@!", "/"
     $passwordNumber = Get-Random -Maximum 1000
@@ -41,7 +41,7 @@ $CreateUserADForm = New-Object system.Windows.Forms.Form
 
 #Création de la fenêtre
 $CreateUserADForm.ClientSize         = '500,450'
-$CreateUserADForm.text               = "Ajout d'un nouvel utilisateur - HYPROMAT"
+$CreateUserADForm.text               = "Ajout d'un nouvel utilisateur"
 $CreateUserADForm.BackColor          = "#ffffff"
 
 $Titre                           = New-Object system.Windows.Forms.Label
